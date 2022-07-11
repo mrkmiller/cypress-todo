@@ -4,9 +4,11 @@
   "description": "Cypress testing a TodoMVC",
   "main": "index.html",
   "scripts": {
+    "start": "http-server",
     "test": "cypress open"
   },
   "dependencies": {
-    "cypress": "^10.3.0"
+    "cypress": "^10.3.0",
+    "http-server": "^14.1.1"
   }
 }
