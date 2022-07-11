@@ -1,0 +1,12 @@
+{
+  "name": "cypress-todo",
+  "version": "1.0.0",
+  "description": "Cypress testing a TodoMVC",
+  "main": "index.html",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "dependencies": {
+    "cypress": "^10.3.0"
+  }
+}
