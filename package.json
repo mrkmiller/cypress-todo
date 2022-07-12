@@ -6,7 +6,8 @@
   "scripts": {
     "start": "npm run serve",
     "serve": "http-server -c-1 -p 8080",
-    "test": "cypress open"
+    "cypress": "cypress open",
+    "test": "cypress run"
   },
   "dependencies": {
     "cypress": "^10.3.0",
