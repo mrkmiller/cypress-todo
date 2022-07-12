@@ -4,7 +4,7 @@ import Template from './template.js';
 import Store from './store.js';
 import View from './view.js';
 
-const store = new Store('todos-vanilla-es6');
+const store = new Store('todos');
 
 const template = new Template();
 const view = new View(template);

@@ -23,3 +23,19 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('addTask', (name, complete = false) => {
+  cy.log(`Add task: ${name}`)
+  cy.get('.new-todo', {log: false})
+    .type(`${name}{enter}`, {log: false})
+  cy.contains('.todo-list li', name, {log: false})
+    .should('exist', {log: false})
+
+  if (complete) {
+    cy.contains('.todo-list li', name, {log: false})
+      .find('.toggle', {log: false})
+      .click({log: false})
+    cy.contains('.todo-list li', name, {log: false})
+      .should('have.class', 'completed')
+  }
+})

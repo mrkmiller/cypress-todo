@@ -185,7 +185,9 @@ export default class View {
    */
   bindRemoveItem(handler) {
     $delegate(this.$todoList, '.destroy', 'click', ({target}) => {
-      handler(_itemId(target));
+      if (window.confirm('Do you really want to remove this task?')) {
+        handler(_itemId(target));
+      }
     });
   }
 

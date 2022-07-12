@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <title>Cypress • TodoMVC</title>
-  <link rel="stylesheet" href="css/app.css">
-  <script src="js/app.js" type="module"></script>
+  <link rel="stylesheet" href="/css/app.css?v=1">
+  <script src="/js/app.js?v=1" type="module"></script>
 </head>
 <body>
-<section class="todoapp">
+<main class="todoapp">
   <header class="header">
     <h1>todos</h1>
     <input class="new-todo" placeholder="What needs to be done?" autofocus>
@@ -20,22 +20,23 @@
       <span class="todo-count"></span>
       <ul class="filters">
         <li>
-          <a href="#/" class="selected">All</a>
+          <a href="#/" class="selected" data-all>All</a>
         </li>
         <li>
-          <a href="#/active">Active</a>
+          <a href="#/active" data-active>Active</a>
         </li>
         <li>
-          <a href="#/completed">Completed</a>
+          <a href="#/completed" data-completed>Completed</a>
         </li>
       </ul>
       <button class="clear-completed">Clear completed</button>
     </footer>
   </section>
-</section>
+</main>
 <footer class="info">
   <p>Double-click to edit a todo</p>
   <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+  <p class="mobile-only">I only appear in Mobile</p>
 </footer>
 
 </body>

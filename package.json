@@ -4,11 +4,13 @@
   "description": "Cypress testing a TodoMVC",
   "main": "index.html",
   "scripts": {
-    "start": "http-server",
+    "start": "npm run serve",
+    "serve": "http-server -c-1 -p 8080",
     "test": "cypress open"
   },
   "dependencies": {
     "cypress": "^10.3.0",
+    "cypress-axe": "^1.0.0",
     "http-server": "^14.1.1"
   }
 }

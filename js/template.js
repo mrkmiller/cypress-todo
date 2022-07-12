@@ -19,8 +19,8 @@ export default class Template {
     return items.reduce((a, item) => a + `
 <li data-id="${item.id}"${item.completed ? ' class="completed"' : ''}>
 	<div class="view">
-		<input class="toggle" type="checkbox" ${item.completed ? 'checked' : ''}>
-		<label>${escapeForHTML(item.title)}</label>
+		<input class="toggle" type="checkbox" ${item.completed ? 'checked' : ''} id="toggle-${item.id}">
+		<label for="toggle-${item.id}">${escapeForHTML(item.title)}</label>
 		<button class="destroy"></button>
 	</div>
 </li>`, '');
