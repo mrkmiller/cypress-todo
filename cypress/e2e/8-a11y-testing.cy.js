@@ -2,6 +2,7 @@
 
 describe('8. Accessibility Testing', () => {
   beforeEach(() => {
+    cy.intercept('**/todos', { fixture: 'todos.json' })
     cy.visit('/')
   })
 

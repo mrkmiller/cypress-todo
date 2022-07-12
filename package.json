@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "npm run serve",
-    "serve": "http-server -c-1 -p 8080",
+    "serve": "http-server -s -c-1 -p 8080",
     "cypress": "cypress open",
     "test": "cypress run"
   },

@@ -2,6 +2,7 @@
 
 describe('6. Viewport Resizing', () => {
   beforeEach(() => {
+    cy.intercept('**/todos', { fixture: 'todos.json' })
     cy.visit('/')
   })
 

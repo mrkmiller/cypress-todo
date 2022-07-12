@@ -2,6 +2,7 @@
 
 describe('7. Custom command', () => {
   beforeEach(() => {
+    cy.intercept('**/todos', { fixture: 'todos.json' })
     cy.visit('/')
   })
 

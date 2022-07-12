@@ -2,6 +2,7 @@
 
 describe('5. Stub Function', () => {
   beforeEach(() => {
+    cy.intercept('**/todos', { fixture: 'todos.json' })
     cy.visit('/')
   })
 

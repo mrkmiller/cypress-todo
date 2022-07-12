@@ -1,15 +1,15 @@
+# https://docs.cypress.io/guides/continuous-integration/github-actions
 name: Cypress Tests
 
 # Triggers the workflow on push.
 on: [push]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "cypress-run"
+  # This workflow contains a single job called "cypress-run".
   cypress-run:
     runs-on: ubuntu-latest
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it.
       - uses: actions/checkout@v3
 
       # Install NPM dependencies, cache them correctly
@@ -17,6 +17,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v4
         with:
+          # Start the server.
           start: npm start
           # Wait for the server to start.
           wait-on: 'http://localhost:8080'
