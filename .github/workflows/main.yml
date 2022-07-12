@@ -16,3 +16,7 @@ jobs:
       # and run all Cypress tests. It will call "npm test".
       - name: Cypress run
         uses: cypress-io/github-action@v4
+        with:
+          start: npm start
+          # Wait for the server to start.
+          wait-on: 'http://localhost:8080'
