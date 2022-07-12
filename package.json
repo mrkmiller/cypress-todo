@@ -7,11 +7,12 @@
     "start": "npm run serve",
     "serve": "http-server -c-1 -p 8080",
     "cypress": "cypress open",
-    "test": "cypress run"
+    "test": "start-server-and-test start http://localhost:8080 cypress run"
   },
   "dependencies": {
     "cypress": "^10.3.0",
     "cypress-axe": "^1.0.0",
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "start-server-and-test": "^1.14.0"
   }
 }
