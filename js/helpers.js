@@ -56,3 +56,29 @@ export function $delegate(target, selector, type, handler, capture) {
  * @returns {string} String with unsafe characters escaped with entity codes
  */
 export const escapeForHTML = s => s.replace(/[&<]/g, c => c === '&' ? '&amp;' : '&lt;');
+
+/**
+ * Seed the storage with some tasks from a remote API.
+ *
+ * @param store
+ * @param controller
+ * @return {Promise<void>}
+ */
+export async function seedTasks(store, controller) {
+  if (store.getLocalStorage().length >= 1) {
+    return;
+  }
+
+  try {
+    const res = await fetch('https://jsonplaceholder.typicode.com/todos');
+    let data = await res.json();
+    // Limit to just 3.
+    if (data.length > 3) {
+      data = data.slice(0, 3);
+    }
+    store.setLocalStorage(data);
+    controller._filter(true)
+  } catch (error) {
+    console.log(error);
+  }
+}

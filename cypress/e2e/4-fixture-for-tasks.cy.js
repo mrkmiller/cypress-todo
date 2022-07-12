@@ -7,12 +7,10 @@ describe('4. Fixture for default tasks', () => {
 
   // https://docs.cypress.io/api/commands/intercept
   it('Intercept an API call and fake the response', () => {
-    cy.get('.new-todo').type('Teach Cypress{enter}')
+    cy.intercept('**/todos', { fixture: 'todos.json' })
 
     // Remove the task.
-    cy.contains('.todo-list li', 'Teach Cypress')
-      .find('.destroy')
-      .click({ force: true })
+    cy.contains('Fixture Task')
   })
 
 })

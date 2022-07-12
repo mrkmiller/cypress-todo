@@ -9,7 +9,6 @@ describe('2. Add Items', () => {
     cy.get('.new-todo')
       // .type('Teach Cypress')
       .type('Teach Cypress{enter}') // Use {enter} to press the "enter" key.
-      .type('A second item{enter}')
     cy.contains('.todo-list', 'Teach Cypress')
 
     // Edit the message.
