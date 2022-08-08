@@ -4,7 +4,9 @@ This repo is meant to demonstrate how to write different types of
 [Cypress](https://www.cypress.io/) tests by testing the
 [TodoMVC](http://todomvc.com) app.
 
-[Node.js](https://nodejs.org) is required.
+[Node.js](https://nodejs.org) is required. If using
+[NVM](https://github.com/nvm-sh/nvm) you can run `$ nvm use` to automatically
+switch to the correct version of Node.
 
 ## Installation
 
