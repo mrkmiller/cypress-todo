@@ -8,7 +8,10 @@ describe('4. Fixture for default tasks', () => {
 
   // https://docs.cypress.io/api/commands/intercept
   it('Intercept an API call and fake the response', () => {
-    // Tasks should show fixture data.
+    /**
+     * 1. Tasks should show fixture data.
+     */
+
     cy.contains('Fixture 1')
     cy.contains('Fixture 2')
     cy.contains('Fixture 3')
