@@ -16,11 +16,14 @@ switch to the correct version of Node.
 $ npm ci
 ```
 
-2. Start the server.
+2. Start the server so that the site can be viewed at: 
+[http://127.0.0.1:8080](http://127.0.0.1:8080)
 
 ```shell
 $ npm start
 ```
+
+
 
 3. Open the Cypress GUI with another terminal window.
 
