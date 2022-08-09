@@ -6,7 +6,7 @@ describe('4. Fixture for default tasks', () => {
      * 1. Intercept the Ajax Fetch and replace with fixture data.
      */
 
-    cy.intercept('**/todos', { fixture: 'todos.json' })
+    // cy.intercept('**/todos', { fixture: 'todos.json' })
     cy.visit('/')
   })
 
@@ -16,9 +16,9 @@ describe('4. Fixture for default tasks', () => {
      * 2. Tasks should show fixture data instead of remote API data.
      */
 
-    cy.contains('Fixture 1')
-    cy.contains('Fixture 2')
-    cy.contains('Fixture 3')
+    // cy.contains('Fixture 1')
+    // cy.contains('Fixture 2')
+    // cy.contains('Fixture 3')
   })
 
 })
