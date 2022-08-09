@@ -379,11 +379,11 @@ html .clear-completed:active {
 }
 
 /* Fix for #6 viewport */
-@media (min-width: 1000px) {
+/* @media (min-width: 1000px) {
   .mobile-only {
     display: none;
   }
-}
+} */
 
 /* Fix for #8 accessibility */
 /* .todoapp h1 {

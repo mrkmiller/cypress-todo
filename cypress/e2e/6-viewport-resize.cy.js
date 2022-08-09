@@ -12,15 +12,15 @@ describe('6. Viewport Resizing', () => {
      * 1. Set a Desktop with specific width and height.
      */
 
-    cy.viewport(1366, 768)
-    cy.contains('I only appear in Mobile').should('not.be.visible')
+    // cy.viewport(1366, 768)
+    // cy.contains('I only appear in Mobile').should('not.be.visible')
 
     /**
      * 2. Set a Mobile size with a preset name.
      */
 
-    cy.viewport('iphone-8')
-    cy.contains('I only appear in Mobile').should('be.visible')
+    // cy.viewport('iphone-8')
+    // cy.contains('I only appear in Mobile').should('be.visible')
   })
 
 })
