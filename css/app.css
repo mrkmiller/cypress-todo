@@ -386,6 +386,6 @@ html .clear-completed:active {
 }
 
 /* Fix for #8 accessibility */
-.todoapp h1 {
+/* .todoapp h1 {
   color: #b83f45;
-}
+} */

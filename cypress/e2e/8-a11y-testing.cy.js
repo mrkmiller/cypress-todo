@@ -12,14 +12,14 @@ describe('8. Accessibility Testing', () => {
      * 1. Add the Axe accessibility library https://github.com/component-driven/cypress-axe.
      */
 
-    cy.injectAxe()
+    // cy.injectAxe()
 
     /**
      * 2. Add a task and check that the page is accessible.
      */
 
-    cy.addTask('Task 1')
-    cy.checkA11y()
+    // cy.addTask('Task 1')
+    // cy.checkA11y()
   })
 
 })
