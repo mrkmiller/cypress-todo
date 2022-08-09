@@ -12,9 +12,9 @@ describe('7. Custom command', () => {
      * 1. Use a custom cy.addTask() command for often repeated code.
      */
 
-    cy.addTask('Task 1')
-    cy.addTask('Task 2', true)
-    cy.addTask('Task 3')
+    // cy.addTask('Task 1')
+    // cy.addTask('Task 2', true)
+    // cy.addTask('Task 3')
   })
 
 })
