@@ -35,27 +35,27 @@ Cypress.Commands.add('addTask', (name, complete = false) => {
    * 1. Create a custom log message.
    */
 
-  cy.log(`Add task: ${name}`)
+  // cy.log(`Add task: ${name}`)
 
   /**
    * 2. Create the task and ensure it exists.
    */
 
-  cy.get('.new-todo', {log: false})
-    .type(`${name}{enter}`, {log: false})
-  cy.contains('.todo-list li', name, {log: false})
-    .should('exist', {log: false})
+  // cy.get('.new-todo', {log: false})
+  //   .type(`${name}{enter}`, {log: false})
+  // cy.contains('.todo-list li', name, {log: false})
+  //   .should('exist', {log: false})
 
   /**
    * 3. Toggle the "Complete" status button if this task is already complete and
    *    ensure the that it is now marked as complete.
    */
 
-  if (complete) {
-    cy.contains('.todo-list li', name, {log: false})
-      .find('.toggle', {log: false})
-      .click({log: false})
-    cy.contains('.todo-list li', name, {log: false})
-      .should('have.class', 'completed')
-  }
+  // if (complete) {
+  //   cy.contains('.todo-list li', name, {log: false})
+  //     .find('.toggle', {log: false})
+  //     .click({log: false})
+  //   cy.contains('.todo-list li', name, {log: false})
+  //     .should('have.class', 'completed')
+  // }
 })
