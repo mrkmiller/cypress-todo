@@ -16,35 +16,35 @@ describe('5. Stub Function', () => {
      * 1. Stub the Window.confirm() function and cancel it to retain the tasks.
      */
 
-    cy.window().then(win => {
-      // Create a '@confirm' alias so we can use the stub later.
-      cy.stub(win, 'confirm').returns(false).as('confirm')
-    })
+    // cy.window().then(win => {
+    //   // Create a '@confirm' alias so we can use the stub later.
+    //   cy.stub(win, 'confirm').returns(false).as('confirm')
+    // })
 
     /**
      * 2. Start to remove a task but then cancel it.
      */
 
-    cy.contains('.todo-list li', 'Teach Cypress')
-      .find('.destroy')
-      .click({ force: true }) // Force the click even thought the button is hidden.
-    cy.contains('Teach Cypress').should('exist')
+    // cy.contains('.todo-list li', 'Teach Cypress')
+    //   .find('.destroy')
+    //   .click({ force: true }) // Force the click even thought the button is hidden.
+    // cy.contains('Teach Cypress').should('exist')
 
     /**
      * 3. Remove the stub (by default cypress will click "ok" on the dialog).
      */
 
-    // Use the "confirm" alias we created in step 1.
-    cy.get('@confirm').invoke('restore')
+    // // Use the "confirm" alias we created in step 1.
+    // cy.get('@confirm').invoke('restore')
 
     /**
      * 4. Remove the task completely.
      */
 
-    cy.contains('.todo-list li', 'Teach Cypress')
-      .find('.destroy')
-      .click({ force: true })
-    cy.contains('Teach Cypress').should('not.exist')
+    // cy.contains('.todo-list li', 'Teach Cypress')
+    //   .find('.destroy')
+    //   .click({ force: true })
+    // cy.contains('Teach Cypress').should('not.exist')
   })
 
 })
