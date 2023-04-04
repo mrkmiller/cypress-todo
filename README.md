@@ -1,5 +1,7 @@
 # Cypress Todo Demo
 
+[Video Presentation from UCTech 2022](https://mediaspace.ucsd.edu/media/Automated+End-to-End+Website+Testing+with+Cypress/1_awj5vu5o/)
+
 This repo is meant to demonstrate how to write different types of
 [Cypress](https://www.cypress.io/) tests by testing the
 [TodoMVC](http://todomvc.com) app.
